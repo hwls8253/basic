@@ -1,0 +1,251 @@
+[class*='icon-']:not(.icon-wrap) {
+    display:inline-block;
+    background-image:url(../images/common.png);
+    @include bg-img-basic;
+    vertical-align: middle;
+    &.icon-join {
+        width:rem(25);
+        height:rem(20);
+        background-position: rem(-52) rem(-37);
+    }
+    &.icon-login {
+        width:rem(25);
+        height:rem(20);
+        background-position: rem(-77) rem(-37);
+    }
+    &.icon-logout {
+        width:rem(25);
+        height:rem(20);
+        background-position: rem(-2) rem(-140);
+    }
+    &.icon-user {
+        width:rem(25);
+        height:rem(20);
+        background-position: rem(-102) rem(-37);
+    }
+    &.icon-cart {
+        width:rem(25);
+        height:rem(20);
+        background-position: rem(-127) rem(-37);
+    }
+    &.icon-menu {
+        width:rem(29);
+        height:rem(25);
+        background-position: rem(-5) rem(-5);
+    }
+    &.icon-sch {
+        width:rem(29);
+        height:rem(25);
+        background-position: rem(-46) rem(-5);
+    }
+    &.icon-sch2 {
+        width:rem(30);
+        height:rem(30);
+        background-position: rem(-125) rem(-2);
+    }
+    &.icon-more {
+        width:rem(16);
+        height:rem(16);
+        background-position: rem(-70) rem(-63);
+        margin:rem(-3) 0 0 rem(8);
+    }
+    &.icon-more2 {
+        width:rem(24);
+        height:rem(24);
+        background-position: rem(-161) rem(-37);
+    }
+    &.icon-btn-arrow {
+        width:rem(4);
+        height:rem(7);
+        background-position: rem(-58) rem(-66);
+    }
+    &.icon-top {
+        width:rem(42);
+        height:rem(42);
+        background-position: rem(-7) rem(-36);
+    }
+    &.icon-chk {
+        width:rem(25);
+        height:rem(24);
+        background-position: rem(-71) rem(-86);
+    }
+    &.icon-radio {
+        width:rem(14);
+        height:rem(14);
+        background-position: rem(-117) rem(-65);
+    }
+    &.icon-naver {
+        width:rem(25);
+        height:rem(22);
+        background-position: rem(-106) rem(-87);
+        margin: 0 rem(15);
+    }
+    &.icon-kakao {
+        width:rem(25);
+        height:rem(22);
+        background-position: rem(-140) rem(-87);
+        margin: 0 rem(15);
+    }
+    &.icon-x {
+        width:rem(24);
+        height:rem(24);
+        background-position: rem(-6) rem(-85);
+    }
+    &.icon-prev {
+        width:rem(13);
+        height:rem(11);
+        background-position: rem(-29) rem(-119);
+        transform: rotate(-180deg);
+    }
+    &.icon-prev2 {
+        width:rem(13);
+        height:rem(11);
+        background-position: rem(-45) rem(-119);
+        transform: rotate(-180deg);
+    }
+    &.icon-next {
+        width:rem(13);
+        height:rem(11);
+        background-position: rem(-29) rem(-119);
+    }
+    &.icon-next2 {
+        width:rem(13);
+        height:rem(11);
+        background-position: rem(-45) rem(-119);
+    }
+    &.icon-date {
+        width:rem(14);
+        height:rem(14);
+        background-position: rem(-7) rem(-117);
+    }
+    &.icon-sch3 {
+        width:rem(16);
+        height:rem(16);
+        background-position: rem(-174) rem(-90);
+    }
+    &.icon-plus {
+        width:rem(9);
+        height:rem(9);
+        background-position: rem(-81) rem(-120);
+    }
+    &.icon-minus {
+        width:rem(9);
+        height:rem(9);
+        background-position: rem(-66) rem(-120);
+    }
+    &.icon-board-sch {
+        width:rem(20);
+        height:rem(20);
+        background-position: rem(-98) rem(-115);
+    }
+    &.icon-price-plus {
+        width:rem(22);
+        height:rem(22);
+        background-position: rem(-125) rem(-115);
+    }
+    &.icon-price-equals {
+        width:rem(22);
+        height:rem(22);
+        background-position: rem(-153) rem(-115);
+    }
+    &.icon-file {
+        width:rem(18);
+        height:rem(18);
+        background-position: rem(-179) rem(-117);
+        margin:rem(0) rem(10);
+    }
+    &.icon-side {
+        width:rem(23);
+        height:rem(20);
+        background-position: rem(-35) rem(-143);
+        margin:rem(0) rem(16) 0 0;
+    }
+    &.icon {
+        background-image:url(../images/join_icon.png);
+        &.icon-member1 {
+            width:rem(89);
+            height:rem(71);
+            background-position: rem(-14) rem(-15);
+        }
+        &.icon-member2 {
+            width:rem(96);
+            height:rem(77);
+            background-position: rem(-156) rem(-12);
+        }
+        &.icon-member3 {
+            width:rem(90);
+            height:rem(101);
+            background-position: rem(-111) rem(-307);
+        }
+        &.icon-robot {
+            width:rem(61);
+            height:rem(46);
+            background-position: rem(-14) rem(-109);
+            margin-left:rem(14);
+        }
+        &.icon-chart {
+            width:rem(40);
+            height:rem(46);
+            background-position: rem(-87) rem(-109);
+        }
+        &.icon-market {
+            width:rem(43);
+            height:rem(42);
+            background-position: rem(-148) rem(-111);
+        }
+        &.icon-view {
+            width:rem(46);
+            height:rem(45);
+            background-position: rem(-16) rem(-178);
+            margin-left:rem(10);
+            margin-top:rem(-2);
+        }
+        &.icon-write {
+            width:rem(46);
+            height:rem(44);
+            background-position: rem(-83) rem(-179);
+            margin-left:rem(13);
+        }
+        &.icon-complet {
+            width:rem(51);
+            height:rem(45);
+            background-position: rem(-147) rem(-178);
+            margin-left:rem(10);
+            margin-top:rem(-4);
+        }
+        &.icon-mobile {
+            width:rem(82);
+            height:rem(96);
+            background-position: rem(-308) rem(-2);
+            margin-left:rem(20);
+            margin-top:rem(-5);
+        }
+        &.icon-complet-large {
+            width:rem(164);
+            height:rem(142);
+            background-position: rem(-237) rem(-119);
+        }
+        &.icon-secession {
+            width:rem(121);
+            height:rem(121);
+            background-position: rem(-278) rem(-276);
+            display:block;
+            margin:rem(30) auto rem(40);
+            padding:0;
+        }
+    }
+}
+.on {
+    .icon {
+        &.icon-view {
+            background-position:rem(-16) rem(-239) !important;
+        }
+        &.icon-write {
+            background-position:rem(-83) rem(-240) !important;
+        }
+        &.icon-complet {
+            background-position:rem(-147) rem(-239) !important;
+        }
+
+    }
+}

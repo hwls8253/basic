@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>style guide</title>
+    <link rel="stylesheet" href="../js/datepicker/datepicker.min.css" />
+    <link rel="stylesheet" href="../js/owl.carousel/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="../js/owl.carousel/css/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="../css/styleguide.css" />
+    <!-- Javascript -->
+    <script src="../js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="../js/datepicker/datepicker.min.js"></script>
+    <script src="../js/owl.carousel/owl.carousel.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://use.fontawesome.com/58ff22b3bf.js"></script>
+  </head>
+
+  <body class="style-wrap">
+    <div class="style-nav">
+      <div class="style-btn">
+        <button class="open-btn">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <button class="close-btn">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <ul class="sg-menu">
+        <li class="on"><a href="javascript:void(0);">Colors</a></li>
+        <li><a href="javascript:void(0);">Typography</a></li>
+        <li><a href="javascript:void(0);">Buttons</a></li>
+        <li><a href="javascript:void(0);">Forms</a></li>
+        <li><a href="javascript:void(0);">Table + tab</a></li>
+        <li><a href="javascript:void(0);">comment</a></li>
+        <li><a href="javascript:void(0);">Pagination</a></li>
+        <li><a href="javascript:void(0);">search box</a></li>
+        <li><a href="javascript:void(0);">popup</a></li>
+        <li><a href="javascript:void(0);">accordion</a></li>
+      </ul>
+    </div>
+    <div class="style-contents sub">
+      <div class="item">
+        <h3>Colors</h3>
+        <div class="colors">
+          <span class="primary-color">
+            <span class="background"> </span>
+            <span class="txt">
+              primary-color<br />
+              <span>#283659</span>
+            </span>
+          </span>
+          <span class="primary-color-lighten">
+            <span class="background"> </span>
+            <span class="txt">
+              primary-color-lighten<br />
+              <span>#273a80</span>
+            </span>
+          </span>
+          <span class="primary-color-light">
+            <span class="background"> </span>
+            <span class="txt">
+              primary-color-light<br />
+              <span>#4858d9</span>
+            </span>
+          </span>
+          <span class="secondary-color">
+            <span class="background"> </span>
+            <span class="txt">
+              secondary-color<br />
+              <span>#4b4d51</span>
+            </span>
+          </span>
+          <span class="third-color">
+            <span class="background"> </span>
+            <span class="txt">
+              third-color<br />
+              <span>#a5b0cd</span>
+            </span>
+          </span>
+          <span class="bg-gray">
+            <span class="background"> </span>
+            <span class="txt">
+              bg-gray<br />
+              <span>#f6f6f6</span>
+            </span>
+          </span>
+          <span class="bg-gray2">
+            <span class="background"> </span>
+            <span class="txt">
+              bg-gray2<br />
+              <span>#ddd</span>
+            </span>
+          </span>
+          <span class="bg-gray3">
+            <span class="background"> </span>
+            <span class="txt">
+              bg-gray3<br />
+              <span>#f9f9f9</span>
+            </span>
+          </span>
+          <span class="border-gray">
+            <span class="background"> </span>
+            <span class="txt">
+              border-gray<br />
+              <span>#ccc</span>
+            </span>
+          </span>
+          <span class="border-gray-lighten">
+            <span class="background"> </span>
+            <span class="txt">
+              border-gray-lighten<br />
+              <span>#d9d9d9</span>
+            </span>
+          </span>
+          <span class="border-gray-light">
+            <span class="background"> </span>
+            <span class="txt">
+              border-gray-light<br />
+              <span>#d5d5d5</span>
+            </span>
+          </span>
+          <span class="border-black">
+            <span class="background"> </span>
+            <span class="txt">
+              border-black<br />
+              <span>#333333</span>
+            </span>
+          </span>
+          <span class="content-color">
+            <span class="background"> </span>
+            <span class="txt">
+              text-color<br />
+              <span>#333</span>
+            </span>
+          </span>
+          <span class="emphasis-color">
+            <span class="background"> </span>
+            <span class="txt">
+              emphasis-color<br />
+              <span>#ec104e</span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <script>
+      $('.sg-menu a').click(function() {
+        $(this).parent('li').addClass('on').siblings().removeClass('on');
+        var index = $(this).parent('li').index();
+        var scrollPosition = $('.style-contents .item').eq(index).offset().top;
+        $("html").animate({
+          scrollTop: scrollPosition - 40
+        }, 300)
+      });
+      $('.tab-btns li').click(function () {
+        $(this).addClass('on');
+        $('.tab-btns li').not(this).removeClass('on');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+.style-wrap {
+  position: relative;
+  .style-nav {
+    position: fixed;
+    overflow: scroll;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    padding: 20px 0;
+    border-right: 1px solid #aaa;
+    box-sizing: border-box;
+    float: left;
+    .style-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      i {
+        font-size: 1.5em;
+      }
+      .open-btn {
+        display: none;
+      }
+    }
+    li {
+      a {
+        display: block;
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        &:hover,
+        &:active,
+        &a:focus
+        {
+          font-weight: bolder;
+        }
+      }
+      &.on a {
+        font-weight:bolder;
+      }
+    }
+  }
+}
+.style-contents.sub {
+  width: calc(100% - 200px);
+  margin-left: 200px;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 40px;
+  .item {
+    padding-bottom: 100px;
+    > h3:not(.subtitle) {
+      font-size: 18px;
+      color: #aaa;
+      padding: 5px 0 10px 15px;
+      margin: 0 0 20px;
+      border-bottom: 1px solid #ddd;
+      border-left: 5px solid #ddd;
+      font-style: italic;
+    }
+  }
+  h3 + div:not(.table-wrap) {
+    padding: 20px 15px;
+    color: #444;
+  }
+  .colors > span {
+    display: inline-block;
+    margin: 0 30px 30px 0;
+  }
+  .colors .background {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    float: left;
+  }
+  .colors .txt {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    line-height: 1.6;
+  }
+  .colors .txt span {
+    color: #ccc;
+    font-size: 12px;
+  }
+}
+.primary-color .background {
+  background: $primary-color;
+}
+.primary-color-lighten .background {
+  background: $primary-color-lighten;
+}
+.primary-color-light .background {
+  background: $primary-color-light;
+}
+.secondary-color .background {
+  background: $secondary-color;
+}
+.third-color .background {
+  background: $third-color;
+}
+.bg-gray .background {
+  background: $bg-gray;
+}
+.bg-gray2 .background {
+  background: $bg-gray2;
+}
+.bg-gray3 .background {
+  background: $bg-gray3;
+}
+
+.head-color .background {
+  background: $default-color;
+}
+.content-color .background {
+  background: $default-color-lighten;
+}
+
+.emphasis-color .background {
+  background: $emphasis-color;
+}

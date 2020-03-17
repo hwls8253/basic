@@ -1,0 +1,75 @@
+.modal-wrap {
+    opacity:0;
+    visibility: hidden;
+    position: fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    left:0;
+    top:0;
+    z-index: 100;
+    transition: all 0.3s;
+    &.is-visible {
+        opacity:1;
+        visibility:visible;
+        .modal {
+            margin-top:rem(0);
+        }
+    }
+    .modal {
+        width:rem(500);
+        @include position-center;
+        background:#fff;
+        padding:0 rem(50) rem(50);
+        margin-top:rem(-100);
+        transition: all 0.3s;
+        max-height:90vh;
+        overflow-y:auto;
+        h2 {
+            font-size:$head2-txt;
+            font-weight:500;
+            padding:rem(28) rem(32) rem(22);
+            margin: 0 rem(-50);
+            border-bottom:rem(1) solid $border-gray-lighten;
+        }
+        > .txt {
+            padding:rem(60) 0 rem(30);
+            line-height:1.6;
+            text-align:center;
+        }
+        .bg-gray {
+            &.box {
+                text-align:center;
+                font-size:rem(24);
+                font-weight: 500;
+                padding:rem(60) 0;
+            }
+        }
+        .btn.w100 {
+            margin:rem(20) 0;
+        }
+        .close-btn {
+            position: absolute;
+            right:rem(32);
+            top:rem(23);
+            span {
+                text-indent: -9999px;
+                overflow: hidden;
+            }
+        }
+        .input-box {
+            min-width:auto;
+        }
+        .con {
+            width:100%;
+            margin:rem(50) 0;
+            .table-wrap:not(.list-style) th {
+                padding-left:rem(37);
+            }
+        }
+        &.large {
+            width:auto;
+            min-width:rem(800);
+        }
+    }
+}

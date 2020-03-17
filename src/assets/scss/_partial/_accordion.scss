@@ -1,0 +1,147 @@
+.accordion {
+    width:100%;
+    text-align:left;
+    li {
+        background:#fff;
+        border-bottom:rem(1) solid $border-gray-lighten;
+        .title {
+            font-size:$title-txt;
+            position: relative;
+            padding: rem(25) rem(10) rem(20);
+            cursor: pointer;
+            h3 {
+                padding:rem(5) 0 0 ;
+            }
+            .arrow-d {
+                right:rem(24);
+                top:50%;
+                width:rem(14);
+                height:rem(14);
+                margin-top:rem(-14);
+                border-color:#666;
+                transition: all .3s;
+            }
+        }
+        .contents {
+            max-height:0;
+            padding:0 rem(45);
+            overflow: hidden;
+            font-size:$basic-txt;
+            color:$default-color-lighten;
+            line-height:1.4;
+            transition: max-height,padding .3s;
+        }
+        &.on {
+            .title {
+                .arrow-d {
+                    border-color:#5e66a7;
+                    margin-top:rem(-4);
+                    transform: rotate(315deg);
+                }
+            }
+            .contents {
+                padding:rem(40) rem(45);
+                min-height:rem(170);
+                max-height:rem(5000);
+                padding:rem(40) rem(45)
+            }
+        }
+    }
+    table {
+        .ellipsis {
+            width:rem(560);
+        }
+        tr:not(.qna-con) {
+            cursor: pointer;
+        }
+        tr.qna-con {
+            td{
+                padding:0;
+                border:0;
+                background:#fafafa;
+                .qna {
+                    text-align:left;
+                    max-height: 0;
+                    border-bottom:rem(0) solid $border-gray-lighten;
+                    overflow: hidden;
+                    transition: max-height 0.5s ,border 0.5s;
+                    > div {
+                        margin:0 rem(30);
+                        padding:rem(24) 0 ;
+                        color:$default-color-lighten;
+                        border-bottom:rem(1) solid $border-gray-lighten;
+                        &:last-child {
+                            border:0;
+                        }
+                        &.answer {
+                            padding:rem(24) rem(18);
+                            position: relative;
+                            .name {
+                                color:$third-color;
+                                font-weight:500;
+                            }
+                            .time {    
+                                display: inline-block;
+                                font-size:rem(13);
+                                color:$default-color-light;
+                                padding-left:rem(13);
+                            }
+                            p.txt{
+                                padding-top:rem(13);
+                            }
+                            &:before {
+                                content:'';
+                                @include arrow-prev;
+                                transform:rotate(-90deg);
+                                border-color:$default-color-light;
+                                left:rem(0);
+                                top:rem(25);
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.on td .qna {
+                max-height: rem(2000);
+                border-bottom:rem(1) solid $border-gray-lighten;
+            }
+        }
+    }
+    &.faq {
+        .title {
+            font-size:$basic-txt;
+            &:before {
+                content:'Q';
+                font-family: Roboto;
+                font-weight:500;
+                font-size:rem(20);
+                display: inline-block;
+                margin:0 rem(10);
+            }
+            .cate {
+                display: inline-block;
+                margin:0 rem(18) 0 rem(8);
+            }
+        }
+        li{ 
+            .contents{
+                position: relative;
+                padding:rem(0) rem(50);
+                &:before {
+                    content:'A';    
+                    font-family: Roboto;
+                    font-weight:500;
+                    font-size:rem(20);
+                    position: absolute;
+                    left:rem(20);
+                    top:rem(25);
+                    color:$third-color;
+                }
+            }
+            &.on .contents {
+                padding:rem(25) rem(50);
+            }
+        }
+    }
+}

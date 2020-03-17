@@ -1,0 +1,289 @@
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='tel'],
+input[type='email'],
+textarea{
+    border: 0;
+    font-family: NotoSansKR,sans-serif;
+    letter-spacing: -0.05em;
+    color:$default-color;
+}
+input[type=text]::-ms-clear {
+    display:none;
+}
+input::placeholder, textarea::placeholder{
+    color: $placeholder-color;
+    font-family: NotoSansKR,sans-serif;
+}
+input::-webkit-input-placeholder {
+    color: $placeholder-color;
+    font-family: NotoSansKR,sans-serif;
+}
+input:-ms-input-placeholder {
+    color: $placeholder-color;
+    font-family: NotoSansKR,sans-serif;
+}
+textarea::-webkit-input-placeholder {
+    color: $placeholder-color;
+    font-family: NotoSansKR,sans-serif;
+}
+textarea:-ms-input-placeholder {
+    color: $placeholder-color;
+    font-family: NotoSansKR,sans-serif;
+  }
+.input-box {
+    background:#fff;
+    display:inline-block;
+    width:rem(300);
+    input {
+        display:block;
+        width:100%;
+        border:rem(1) solid $border-gray;
+        height:rem(45);
+        font-size: $basic-txt;
+        box-sizing: border-box;
+        padding: 0 rem(14);
+    }
+    &.large {
+        width:rem(432);
+    }
+    &.w100 {
+        width:100%;
+        margin:rem(10) 0 0 ;
+        &.m0 {
+            margin:0;
+        }
+    }
+    &.chk-input {
+        position:relative;
+        &:after {
+            content:'';
+            position:absolute;
+            width:rem(16);
+            height:rem(12);
+            background:url(../images/common.png) no-repeat rem(-160) rem(-66);
+            right:rem(14);
+            top:50%;
+            margin-top:rem(-6);
+        }
+        &.on:after {
+            background:url(../images/common.png) no-repeat rem(-138) rem(-66);
+        }
+    }
+    &.x-input {
+        position:relative;
+        &:after {
+            content:'';
+            position:absolute;
+            width:rem(14);
+            height:rem(14);
+            background:url(../images/common.png) no-repeat rem(-181) rem(-65);
+            right:rem(17);
+            top:50%;
+            margin-top:rem(-6);
+        }
+    }
+    &.date-box {
+        width:rem(170);
+        position: relative;
+        .icon-date {
+            position:absolute;
+            right:rem(15);
+            top:50%;
+            margin-top:rem(-7);
+        }
+    }
+    &.small {
+        display: inline-block;
+        width:rem(170);
+        margin-right:rem(5);
+        &.num {
+            width:rem(45);
+            input{
+                text-align:center;
+                height:rem(35);
+                padding:0;
+            }
+        }
+    }
+    &.small + .small {
+        margin:0 rem(5) 0 0;
+    }
+}
+.chk-box {
+    position: relative;
+    input[type="checkbox"] {
+        width:0;
+        height:0;
+        opacity:0;
+        position: absolute;
+    }
+    input:checked + .icon-chk {
+        background-position: rem(-40) rem(-86);
+    }
+    .icon-chk {
+        cursor: pointer;
+        position:absolute;
+        z-index:1;
+    }
+    label {
+        padding-left:rem(34);
+        vertical-align: middle;
+        cursor: pointer;
+        position: relative;
+        z-index:2;
+    }
+}
+.radio-wrap {
+    position: relative;
+    display: inline-block;
+    margin: rem(-3) 0 0 rem(16);
+    &.style2 {
+        margin: rem(-3) rem(40) 0 0 ;
+    }
+    input[type="radio"] {
+        width:0;
+        height:0;
+        opacity:0;
+        position: absolute;
+    }
+    input:checked + .icon-radio {
+        background-position: rem(-97) rem(-65);
+    }
+    .icon-chk {
+        cursor: pointer;
+    }
+    label {
+        padding-left:rem(5);
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    &.date-radio {
+        border:rem(1) solid $border-gray-lighten;
+        background:#fff;
+        margin:0;
+        &:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        label {
+            display: block;
+            float:left;
+            border-left:rem(1) solid $border-gray-lighten;
+            text-align:center;
+            padding:0;
+            width:rem(78);
+            line-height: rem(38);
+            color:$default-color-lighten;
+            &:nth-of-type(1) {
+                border-left:0;
+            }
+        }
+        input:checked + label {
+            background:$primary-color;
+            color:#fff;
+        }
+    }
+
+}
+.select-wrap {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    background:#fff;
+    &.large {
+        width:rem(300);
+    }
+    &.medium {
+        width:rem(160);
+    }
+    &.w100 {
+        width:100%;
+    }
+    .txt{
+        display: block;
+        border:rem(1) solid $border-gray;
+        height:rem(45);
+        line-height:rem(43);
+        font-size: $basic-txt;
+        width:auto;
+        min-width:rem(120);
+        box-sizing: border-box;
+        padding: 0 rem(14);
+        cursor: pointer;
+        color:$default-color-lighten;
+        position: relative;
+        z-index: 1;
+    }
+    .option {
+        display:none;
+        position: absolute;
+        z-index: 2;
+        top:rem(44);
+        left:0;
+        border:rem(1) solid $border-gray;
+        box-sizing: border-box;
+        width:100%;
+        background:#fff;
+        li {
+            width:100%;
+            box-sizing: border-box;
+            padding:rem(8) rem(14);
+            cursor: pointer;
+            color:$default-color-lighten;
+            &:hover {
+                background:$bg-gray2;
+            }
+        }
+    }
+    &.on {
+        .option {
+            display:block;
+        }
+        .arrow-d {
+            top:rem(20);
+            transform: rotate(315deg);
+        }
+    }
+    .arrow-d {
+        right:rem(15);
+        top:rem(15);
+        width:rem(8);
+        height:rem(8);
+        border-color:$border-gray;
+    }
+}
+.textarea-wrap {
+    border:rem(1) solid $border-gray-lighten;
+    textarea {
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:rem(14);
+        box-sizing: border-box;
+        resize: none;
+        min-height:rem(110);
+        font-size:$basic-txt;
+        background: transparent;
+    }
+}
+.business-num {
+    .input-box {
+        width:rem(130);
+        min-width:auto;
+        margin:0;
+        &.small {
+            width:rem(100);
+            margin:0;
+        }
+    }
+    span {
+        display: inline-block;
+        font-size:rem(14);
+        color:$default-color-lighten;
+        width:rem(15);
+        text-align:center;
+    }
+}

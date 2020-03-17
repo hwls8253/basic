@@ -1,0 +1,43 @@
+//rem 변환 함수
+@function rem($px){
+	@return $px / $rem + rem;
+}
+
+// 기본 폰트사이즈
+$rem : 16;
+$basic-txt : rem(16);
+$title-txt : rem(17);
+$nav-txt : rem(17);
+$small-txt : rem(12);
+$head1-txt: rem(30);
+$head2-txt: rem(20);
+$subhead1-txt: rem(32);
+$subhead2-txt: rem(24);
+$contents-txt : rem(15);
+
+// colors
+$primary-color:#283659;
+$primary-color-lighten:#273a80;
+$primary-color-light:#4858d9;
+$secondary-color:#4b4d51;
+$third-color:#5e66a7;
+
+$bg-gray:#eeeeee;
+$bg-gray2:#f6f6f6;
+$bg-gray3:#f9f9f9;
+
+$border-gray:#ccc;
+$border-gray-lighten:#d9d9d9;
+$border-gray-light:#d5d5d5;
+$border-black: #333333;
+
+$default-color : #333333; // 텍스트
+$default-color-lighten : #777; //텍스트-밝은
+$default-color-light : #999; //텍스트-더 밝은
+$color-gray : #4e4e4e; // 텍스트
+
+$placeholder-color:#999;
+$emphasis-color:#ed104e;
+
+// 컨테이너 크기
+$container-width : rem(1200);
